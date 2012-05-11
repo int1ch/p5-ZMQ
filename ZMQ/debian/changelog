@@ -1,0 +1,5 @@
+libzmq-perl (1.01-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Mike Nikitin <mellior@yandex-team.ru>  Sat, 5 May 2012 14:29:22 +0400

@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+PACKAGE=$(shell dh_listpackages)
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	$(MAKE) pure_install DESTDIR=debian/$(PACKAGE) PREFIX=/usr 
+

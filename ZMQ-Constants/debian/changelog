@@ -1,0 +1,11 @@
+libzmq-constants-perl (1.00-2) unstable; urgency=low
+
+  * build with out perllocal.pod 
+
+ -- Mike Nikitin <mellior@yandex-team.ru>  Sat, 05 May 2012 13:28:51 +0400
+
+libzmq-constants-perl (1.00-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Mike Nikitin <mellior@yandex-team.ru>  Fri, 4 May 2012 19:43:23 +0400

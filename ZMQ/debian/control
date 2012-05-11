@@ -1,0 +1,38 @@
+Source: libzmq-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: perl (>= 5.8.9), libzmq-libzmq2-perl,
+  libzmq-constants-perl
+Maintainer: Mike Nikitin <mellior@yandex-team.ru>
+Standards-Version: 3.8.3
+Homepage: http://search.cpan.org/dist/ZMQ/
+
+Package: libzmq-perl
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}, libzmq-libzmq2-perl,
+  libzmq-constants-perl
+Description: Perl-ish Interface libzmq 
+ ZMQ is a Perl-ish wrapper for libzmq. It uses ZMQ::LibZMQ2 or ZMQ::LibZMQ3
+ (ZMQ::LibZMQ2 is the default)
+ .
+ If you want a one-to-one direct mapping to libzmq, then you should be using
+ ZMQ::LibZMQ2, ZMQ::LibZMQ3 directly
+ .
+ ZMQ will automatically choose the backend (either ZMQ::LibZMQ2 or
+ ZMQ::LibZMQ3) to use. This can be explicitly specified by setting
+ PERL_ZMQ_BACKEND environment variable.
+ .
+ By default ZMQ::LibZMQ2 will be used as the backend. This may change in
+ future versions, so make sure to explicitly set your backend if you don't
+ want it to change:
+ .
+ BEGIN {
+ .
+ $ENV{ PERL_ZMQ_BACKEND } = 'ZMQ::LibZMQ2';
+ .
+ }
+ .
+ use ZMQ;
+ .
+ This description was automagically extracted from the module by dh-make-perl.

@@ -1,0 +1,32 @@
+Source: libzmq-constants-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: perl (>= 5.8.9)
+Maintainer: Mike Nikitin <mellior@yandex-team.ru>
+Standards-Version: 3.8.3
+Homepage: http://search.cpan.org/dist/ZMQ-Constants/
+
+Package: libzmq-constants-perl
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}
+Description: Constants for libzmq
+ libzmq is a fast-chanding beast and constants get renamed, new one gest
+ removed, etc...
+ .
+ We used to auto-generate constants from the libzmq source code, but then
+ adpating the binding code to this change got very tedious, and controling
+ which version contains which constants got very hard to manage.
+ .
+ ZMQ::Constants is now separate from ZMQ main code, and lists the constants
+ statically. You can also specify which set of constants to pull in depending
+ on the zmq version.
+ .
+ If don't care to be strict about which constants to import into your code,
+ then don't bother with the ':vX.X.X' notation, just use like a normal module:
+ .
+ use ZMQ::Constants qw(:all); # pulls all known constants...
+ .
+ # note: may contain extra constants
+ .
+ # if we have clashes in the future

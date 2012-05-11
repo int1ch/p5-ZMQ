@@ -1,0 +1,11 @@
+libzmq-libzmq2-perl (1.01-2) unstable; urgency=low
+
+  * build withour perllocal.pod 
+
+ -- Mike Nikitin <mellior@yandex-team.ru>  Sat, 05 May 2012 14:07:46 +0400
+
+libzmq-libzmq2-perl (1.01-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Mike Nikitin <mellior@yandex-team.ru>  Sat, 5 May 2012 14:04:30 +0400
